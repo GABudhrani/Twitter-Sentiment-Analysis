@@ -61,12 +61,10 @@ def tweet_senti(request):
         keyword = request.POST.get('keyword')
         count = request.POST.get('count')
 
-# keyword = 'covid'
-# count = 15
-        api_key = 'FBlx4knKrSmS5a8NMEYAyhK1L'
-        api_secret = 'BNSn115HQ3xxd3XXT5pJXzo4P9yaRkNTK6CpShvQaOD4uso9l8'
-        access_key = '1262253125626327040-rONz8m4AVgRD0JiQVco2AvBULvelZ5'
-        access_secret = '34CcxIxRiOx2XjaAQBt9Kj7n1hdgrxcsxeSz4kE377LjA'
+        api_key = 'XXXXXXXXXXXXXXXXXX'# Enter your API key here
+        api_secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'# Enter you API security Key here
+        access_key= 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'# Enter you Access Key here
+        access_secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'# Enter you Access security Key here
 
         auth = tweepy.OAuthHandler(api_key, api_secret)  # Pass in Consumer key and secret for authentication by API
         auth.set_access_token(access_key, access_secret)  # Pass in Access key and secret for authentication by API
