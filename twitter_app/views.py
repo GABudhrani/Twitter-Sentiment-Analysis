@@ -141,7 +141,7 @@ def tweet_senti(request):
         sc = StandardScaler()
         sc.fit(x_test)
         x_test = sc.transform(x_test)
-        xgboost_model = joblib.load("/Users/girishbudhrani/Desktop/G drive/Projects/Twiter/tp/twitter_webapp/model/xgboost_model")
+        xgboost_model = joblib.load("staticfiles/model/xgboost_model")
         # print(f"Predicted value is :- {xgboost_model.predict(x_test)}")
         Sentiment = xgboost_model.predict(x_test)
 
@@ -312,7 +312,7 @@ def tweet_senti(request):
             return color
 
 
-        image = np.array(Image.open('/Users/girishbudhrani/Desktop/G drive/Projects/Twiter/tp/twitter_webapp/image/twitter_image.png'))
+        image = np.array(Image.open('staticfiles/image/twitter_image.png'))
         twitter_wc = WordCloud(background_color='white', max_words=1500, mask=image)
 
         twitter_wc.generate(tweets_long_string)
